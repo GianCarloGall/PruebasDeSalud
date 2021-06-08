@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Crear Cuenta | Salud Velox</title>
+        <link rel="icon" href= "images/EscudoVelox2.png">
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <link rel = "stylesheet" type = 'text/css' href = 'Styles/stylesforms.css'>
+        <script src="https://kit.fontawesome.com/9fb0a1aa63.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <div class = "container logo-nav-container">
+                <p class = "logo animate__animated animate__zoomInLeft animate__slower"><i class="fas fa-user-circle"></i> Crear <br class = 'espacioV'>Cuenta</p>
+                <div class = "espacio"></div>
+                <nav>
+                    <ul>
+                        <li onclick="iniciarsesion()"><i class="fas fa-home"></i> Iniciar Sesión</li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section>
+            <main>
+                <form action="CrearCuenta" id="basic-form" name = "formularioRegistro" method="post" class="formulario">
+                    <h4 class="formulario__titulo">Ingrese sus Datos</h4>
+                    <input name = "Nombre" class="formulario__input" placeholder="Nombre(s)">
+                    <input name = "appat" class="formulario__input" placeholder="Apellido paterno">
+                    <input name = "apmat" class="formulario__input" placeholder="Apellido materno">
+                    <input type="number" name="edad" class="formulario__input" placeholder="Edad" min="14" max="99">
+                    <input name="semestre" class="formulario__input" placeholder="Semestre actual" min="1" max="6">
+
+                    <select name="genero" class="formulario__input">
+                        <option value="Maculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                        <option value="none">Prefiero no decirlo</option>
+                    </select>
+
+                    <input type="email" name = "Correo" class="formulario__input" placeholder="Correo Electrónico">
+                    <input name = "Usuario" class="formulario__input" placeholder="Nombre de Usuario">
+                    <input type="password" name = "Contraseña" class="formulario__input" placeholder="Contraseña (6 caracteres mínimo)">
+                    <input type="password" name = "VerificarContrasena" class="formulario__input" placeholder="Verificar Contraseña">
+                    <p class = "centro">Estoy deacuerdo con <a href="javascript:abrir()">Términos y Condiciones <i class="far fa-check-square"></i></a></p>
+                    <input type="submit" value="Registrarse" class = "boton">
+                </form>
+                <div class="ventana" id = "vent">
+                    <h4 class="info_titulo">Términos y Condiciones</h4>
+                    <p class="justificadoTYC">
+                        El presente contrato describe los términos y condiciones aplicables al uso del contenido, productos y/o servicios del sitio web Velox del cual es titular Flores Zamora Ithan Adrian. Para hacer uso del contenido, productos y/o servicios del sitio web el usuario deberá sujetarse a los presentes términos y condiciones.
+                        <br>
+                        I. OBJETO
+                        <br>
+                        El objeto es regular el acceso y utilización del contenido, productos y/o servicios a disposición del público en general en el dominio https://www.Velox.com.
+                        El titular se reserva el derecho de realizar cualquier tipo de modificación en el sitio web en cualquier momento y sin previo aviso, el usuario acepta dichas modificaciones.
+                        El acceso al sitio web por parte del usuario es libre y gratuito, la utilización del contenido, productos y/o servicios implica un costo de suscripción para el usuario.
+                        El sitio web solo admite el acceso a personas mayores de edad y no se hace responsable por el incumplimiento de esto.
+                        El sitio web está dirigido a usuarios residentes en México y cumple con la legislación establecida en dicho país, si el usuario reside en otro país y decide acceder al sitio web lo hará bajo su responsabilidad.
+                        La administración del sitio web puede ejercerse por terceros, es decir, personas distintas al titular, sin afectar esto los presentes términos y condiciones.
+                        <br>
+                        II. USUARIO
+                        <br>
+                        La actividad del usuario en el sitio web como publicaciones o comentarios estarán sujetos a los presentes términos y condiciones. El usuario se compromete a utilizar el contenido, productos y/o servicios de forma lícita, sin faltar a la moral o al orden público, absteniéndose de realizar cualquier acto que afecte los derechos de terceros o el funcionamiento del sitio web.
+                        El usuario se compromete a proporcionar información verídica en los formularios del sitio web.
+                        El acceso al sitio web no supone una relación entre el usuario y el titular del sitio web.
+                        El usuario manifiesta ser mayor de edad y contar con la capacidad jurídica de acatar los presentes términos y condiciones.
+                        <br>
+                        III. ACCESO Y NAVEGACIÓN EN EL SITIO WEB
+                        <br>
+                        El titular no garantiza la continuidad y disponibilidad del contenido, productos y/o servicios en el sitito web, realizará acciones que fomenten el buen funcionamiento de dicho sitio web sin responsabilidad alguna.
+                        El titular no se responsabiliza de que el software esté libre de errores que puedan causar un daño al software y/o hardware del equipo del cual el usuario accede al sitio web. De igual forma, no se responsabiliza por los daños causados por el acceso y/o utilización del sitio web.
+                        <br>
+                        IV. POLÍTICA DE PRIVACIDAD Y PROTECCIÓN DE DATOS
+                        <br>
+                        Conforme a lo establecido en la Ley Federal de Protección de Datos Personales en Posesión de Particulares, el titular de compromete a tomar las medidas necesarias que garanticen la seguridad del usuario, evitando que se haga uso indebido de los datos personales que el usuario proporcione en el sitio web.
+                        El titular corroborará que los datos personales contenidos en las bases de datos sean correctos, verídicos y actuales, así como que se utilicen únicamente con el fin con el que fueron recabados.
+                        El uso de datos personales se limitará a lo previsto en el Aviso de Privacidad disponible en https://www.Velox.com/aviso-de-privacidad.
+                        Velox se reserva el derecho de realizar cualquier tipo de modificación en el Aviso de Privacidad en cualquier momento y sin previo aviso, de acuerdo con sus necesidades o cambios en la legislación aplicable, el usuario acepta dichas modificaciones.
+                        El sitio web implica la utilización de cookies que son pequeñas cantidades de información que se almacenan en el navegador utilizado por el usuario como datos de ingreso, preferencias del usuario, fecha y hora en que se accede al sitio web, sitios visitados y dirección IP, esta información es anónima y solo se utilizará para mejorar el sitio web. Los cookies facilitan la navegación y la hacen más amigable, sin embargo, el usuario puede desactivarlos en cualquier momento desde su navegador en el entendido de que esto puede afectar algunas funciones del sitio web.
+                        <br>
+                        V. POLÍTICA DE ENLACES
+                        <br>
+                        En el sitio web puede contener enlaces a otros sitios de internet pertenecientes a terceros de los cuales no se hace responsable.
+                        <br>
+                        VI. POLÍTICA DE PROPIEDAD INTELECTUAL E INDUSTRIAL
+                        <br>
+                        El titular manifiesta tener los derechos de propiedad intelectual e industrial del sitio web incluyendo imágenes, archivos de audio o video, logotipos, marcas, colores, estructuras, tipografías, diseños y demás elementos que lo distinguen, protegidos por la legislación mexicana e internacional en materia de propiedad intelectual e industrial.
+                        El usuario se compromete a respetar los derechos de propiedad industrial e intelectual del titular pudiendo visualizar los elementos del sitio web, almacenarlos, copiarlos e imprimirlos exclusivamente para uso personal.
+                        <br>
+                        VII. LEGISLACIÓN Y JURISDICCIÓN APLICABLE
+                        <br>
+                        La relación entre el usuario y el titular se regirá por las legislaciones aplicables en México.
+                        Velox no se responsabiliza por la indebida utilización del contenido, productos y/o servicios del sitio web y del incumplimiento de los presentes términos y condiciones.
+                        <br>
+                        Queda implicito el que usted acepte estos términos y condiciones al momento de dar click a Registrarse
+                        <br>
+                        <p onclick="cerrar()" class="boton">Aceptar</p>
+                    </p>
+                </div>
+            </main>
+        </section>
+
+        <footer>
+            <h3>Redes Sociales</h3>
+            <ul>
+                <li onclick="javascript:facebook()"><i class="fab fa-facebook-square"></i> Facebook</li>
+                <li onclick="javascript:instagram()"><i class="fab fa-instagram"></i> Instagram</li>
+                <li onclick="javascript:twitter()"><i class="fab fa-twitter"></i> Twitter</li>
+            </ul>
+            <h3>Correo Electrónico</h3>
+            <ul>
+                <li>velox.software.09@gmail.com</li>
+            </ul>
+            <h3>Página Web</h3>
+            <ul>
+                <li onclick="javascript:velox()">VeloxSoftware.com</a></li>
+            </ul>
+            <h3>Integrantes</h3>
+            <div class="nombres">
+                <ul onclick="javascript:velox()">
+                    <li title="Programador de Formularios">Castañeda Rodríguez<br>Rafael Gil</li>
+                    <li title="Programador de Sesiones">Coronado Segundo<br>Juan Yael</li>
+                    <li title="Programador de Backend">Flores Zamora<br>Ithan Adrian</li>
+                    <li title="Programador de Frontend">Gallegos González<br>Gian Carlo</li>
+                    <li title="Programador de Javascript">Pérez López<br>Jesús Eduardo</li>
+                </ul>
+            </div>
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+
+        <script>
+            function abrir() {
+                document.getElementById("vent").style.display = "block";
+            }
+            function cerrar() {
+                document.getElementById("vent").style.display = "none";
+            }
+            function iniciarsesion() {
+                location.href = "IniciarSesion.jsp";
+            }
+            function velox() {
+                window.open("https://giancarlogall.github.io/VeloxPagina/");
+            }
+            function facebook() {
+                window.open("https://www.facebook.com/VeloxSoftware");
+            }
+            function instagram() {
+                window.open("https://www.instagram.com/veloxsoftware/");
+            }
+            function twitter() {
+                window.open("https://twitter.com/SoftwareVelox");
+            }
+        </script>
+
+        <script>
+            $(document).ready(function () {
+                $("input").on('paste', function (e) {
+                    e.preventDefault();
+                    alert('Esta acción está prohibida');
+                });
+
+                $("input").on('copy', function (e) {
+                    e.preventDefault();
+                    alert('Esta acción está prohibida');
+                });
+            });
+            $(document).ready(function () {
+                $("#basic-form").validate({
+                    rules: {
+                        Nombre: {
+                            required: true,
+                            minlength: 3,
+                            maxlength: 30
+                        },
+                        appat: {
+                            required: true,
+                            minlength: 3,
+                            maxlength: 30
+                        },
+                        apmat: {
+                            required: true,
+                            minlength: 3,
+                            maxlength: 30
+                        },
+                        edad: {
+                            required: true,
+                            number: true,
+                            min: 14,
+                            max: 99
+                        },
+                        semestre: {
+                            required: true,
+                            numbrer: true,
+                            min: 1,
+                            max: 6,
+                            minlength: 1
+                        },
+                        Correo: {
+                            required: true,
+                            email: true
+                        },
+                        Usuario: {
+                            required: true,
+                            minlength: 3,
+                            maxlength: 30
+                        },
+                        Contraseña: {
+                            required: true,
+                            minlength: 3,
+                            maxlength: 20
+                        },
+                        VerificarContrasena: {
+                            equalTo: "#Contraseña",
+                            required: true,
+                            minlength: 3,
+                            maxlength: 20
+                        }
+                    },
+                    messages: {
+                        Nombre: {
+                            required: "Por favor ingresa el nombre",
+                            minlength: "El nombre debe tener más de 3 caracteres ",
+                            maxlength: "El nombre debe tener menos de 30 caracteres"
+                        },
+                        appat: {
+                            required: "Ingresa el Apellido Paterno",
+                            minlength: "El apellido paterno debe tener más de 3 caracteres ",
+                            maxlength: "El apellido paterno debe tener menos de 30 caracteres"
+                        },
+                        apmat: {
+                            required: "Ingresa el Apellido Materno",
+                            minlength: "El apellido materno debe tener más de 3 caracteres ",
+                            maxlength: "El apellido materno debe tener menos de 30 caracteres"
+                        },
+                        edad: {
+                            required: "Por favor ingresa la edad",
+                            number: "Ingresa solo números por favor",
+                            min: "Debes ser mayor de 14 años",
+                            max: "Debes ser menor de 99 años"
+                        },
+                        semestre: {
+                            required: "Por favor ingresa el semestre",
+                            number: "Ingresa solo números por favor",
+                            min: "Debes ser mayor a 1",
+                            max: "Debes ser menor a 6",
+                            minlength: "Los semestres solo son de un número"
+                        },
+                        Correo: {
+                            required: "Por favor ingresa el correo",
+                            email: "Ingresa un correo con formato valido"
+                        },
+                        Usuario: {
+                            required: "Por favor ingresa el usuario",
+                            minlength: "El usuario debe tener más de 3 caracteres ",
+                            maxlength: "El usuario debe tener menos de 30 caracteres"
+                        },
+                        Contraseña: {
+                            required: "Por favor ingresa la contraseña",
+                            minlength: "La contraseña debe tener más de 3 caracteres ",
+                            maxlength: "La contraseña debe tener menos de 20 caracteres"
+                        },
+                        VerificarContrasena: {
+                            equalTo: "La contraseña debe ser igual a la anterior",
+                            minlength: "La contraseña debe tener más de 3 caracteres ",
+                            maxlength: "La contraseña debe tener menos de 20 caracteres",
+                            required: 'Este campo es requerido'
+                        }
+                    }
+                });
+            });
+
+        </script>
+    </body>
+</html>
